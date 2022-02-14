@@ -1,7 +1,16 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@model PasscodeGen
 
 <div>
+   <h1>Random Passcode <span>(passcode #@Context.Session.GetInt32("count"))</span></h1>
+    <h1>@Model.result</h1>
+<a href="/">Generate</a>
+</div>
 
+<div>
+   <h1>Random Passcode <span id="count">(passcode #1)</span></h1>
+    <h1 id="passcode"></h1>
+<button type="button" onclick="generate(14)">Generate</button>
 </div>
